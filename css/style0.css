@@ -1,0 +1,46 @@
+.error {
+    color: red;
+}
+
+.body {
+    /*background-image: url("chipmunks.jpg");*/
+    background-attachment: fixed;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.body_2 {
+    background-image: url('cat.jpg');
+}
+
+.body_3 {
+    background-image: url('puppy.jpg');
+}
+
+.names {
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.3em;
+    margin-left: 27em;
+}
+.home {
+    margin-left: 34em;
+}
+
+
+/*h1 {
+    margin-top: 20;
+}
+.box {
+    margin-left: 5%
+}
+
+#footer {
+    color: blue;
+}*/
+
+hr {
+    clear: both;
+    visibility: hidden;
+}

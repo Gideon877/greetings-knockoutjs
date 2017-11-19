@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Greeting APP | KOjs</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body class="body" style="font-size: 15px">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><img src="css/greeting-with-hat-md.png" alt="Greetings" style="height:33px;"></a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#" title="Display all greeted names.">Greeted</a></li>
+                <li><a href="#" title="Clear all greeted names in the database.">Clear</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="jumbotron" style="font-family: -webkit-body;background-color:white;">
+            <div class="panel panel-defaul">
+                <div class="panel-heading">
+                    <h5> This is a simple Web Application using <strong>KnockOutJS</strong> and <strong>Javascript</strong> that allows you to greet different people. It is in a web form that allows you to enter a name and when 'enter' button is pressed display a greeting like this : Hello, 'THE NAME ENTERED'.</h5>
+                </div>
+            </div>
+
+            <div class="col-sm-*">
+                <form data-bind="submit: greetFunction">
+                    <!-- ... form contents ... -->
+                    <div class="form-group">
+                        <p>Name: <input type="text" id="inputName" value="" data-bind="value: inputName" /></p>
+
+                        <div data-bind="visible: option">
+                            Select language of choice:
+                            <div><input type="radio" name="language" value="Hello," data-bind="checked: selectedLanguage" /> English</div>
+                            <div><input type="radio" name="language" value="Sawubona," data-bind="checked: selectedLanguage" /> Zulu</div>
+                            <div><input type="radio" name="language" value="Molo," data-bind="checked: selectedLanguage" /> isiXhosa</div>
+                        </div>
+                    </div>
+                    <!-- <button type="submit">Greet</button> <br> -->
+
+                </form>
+                <h4><span data-bind="text: selectedLanguage"></span> <span data-bind="text: inputName"> </span></h4>
+                <!-- <h4>Names greeted for session: <span data-bind="text: selectedLanguage"></span></h4> -->
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/libs/knockout/knockout-3.4.2.js" charset="utf-8"></script>
+    <script src="js/libs/jquery/jquery.js" charset="utf-8"></script>
+    <script src="js/index.js" charset="utf-8"></script>
+</body>
+
+</html>
